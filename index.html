@@ -8,6 +8,30 @@
   <link rel="icon" href="logo.png" type="image/png" />
 
   <style>
+        .about {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .fire-gif {
+      width: 200px;
+      height: 250px;
+      image-rendering: pixelated;
+      flex-shrink: 0;
+    }
+
+    .about-text {
+      max-width: 600px;
+    }
+
+    /* mobil – pod sebe */
+    @media (max-width: 768px) {
+      .about {
+       flex-direction: column;
+       text-align: center;
+      }
+    }
     /* ================= BASE ================= */
     html, body {
       margin: 0;
@@ -287,15 +311,19 @@
     <script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1464040/t/5"></script>
   </div>
 
-  <div class="section">
-    <p>
-      We are an <b>"team"</b> indie developing games in Unity.<br>
-      We create prototypes and broken releases, focusing on everything but the game.
-    </p>
-    <p>
-      Follow us for new prototypes and small games.<br>
-      Feedback is welcome, even tho none will come.
-    </p>
+  <div class="section about">
+    <img src="fire.gif" alt="fire" class="fire-gif">
+
+    <div class="about-text">
+      <p>
+        We are an <b>"team"</b> indie developing games in Unity.<br>
+        We create prototypes and broken releases, focusing on everything but the game.
+      </p>
+      <p>
+        Follow us for new prototypes and small games.<br>
+        Feedback is welcome, even tho none will come.
+      </p>
+    </div>
   </div>
 
   <div class="section">
