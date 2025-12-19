@@ -83,9 +83,10 @@
       background-size: cover;
     }
 
+    /* Na mobilu / při vertikální orientaci bezel zmizí */
     @media (orientation: portrait) {
       .bezel {
-        background-size: contain;
+        display: none;
       }
     }
 
