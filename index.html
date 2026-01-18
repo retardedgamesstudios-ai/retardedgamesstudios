@@ -13,6 +13,26 @@
       align-items: center;
       gap: 24px;
     }
+    .bottom-gif {
+      margin-top: 32px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .bottom-gif img {
+      width: 640px;
+      height: 640px;
+      image-rendering: pixelated;
+    }
+
+    /* mobil */
+    @media (max-width: 768px) {
+      .bottom-gif img {
+        width: 100%;
+        height: auto;
+        max-width: 640px;
+      }
+    }
 
     .fire-gif {
       width: 200px;
@@ -352,6 +372,11 @@
     <div class="ue"><span>[2025]</span><span>discord created</span></div>
     <div class="ue"><span>[2024]</span><span>idea phase (eternal)</span></div>
   </div>
+
+  <div class="bottom-gif">
+    <img src="nicegif.gif" alt="nice gif">
+  </div>
+
 
   <div class="footer">
     <a href="https://retarded-games-studios.itch.io/">itch</a> ·
