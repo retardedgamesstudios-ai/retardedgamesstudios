@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
   <meta charset="utf-8" />
@@ -8,7 +7,8 @@
   <link rel="icon" href="logo.png" type="image/png" />
 
   <style>
-        .about {
+    /* ================= ABOUT ================= */
+    .about {
       display: flex;
       align-items: center;
       gap: 24px;
@@ -25,13 +25,32 @@
       max-width: 600px;
     }
 
-    /* mobil – pod sebe */
+    /* ================= CONTACT ================= */
+    .contact {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .contact-gif {
+      width: 220px;
+      height: auto;
+      image-rendering: pixelated;
+      flex-shrink: 0;
+    }
+
+    .contact-text {
+      max-width: 600px;
+    }
+
     @media (max-width: 768px) {
-      .about {
-       flex-direction: column;
-       text-align: center;
+      .about,
+      .contact {
+        flex-direction: column;
+        text-align: center;
       }
     }
+
     /* ================= BASE ================= */
     html, body {
       margin: 0;
@@ -59,7 +78,7 @@
       text-shadow: 0 0 6px #9cff9c, 0 0 12px #9cff9c;
     }
 
-    /* ================= CRT OVERLAY ================= */
+    /* ================= CRT ================= */
     .crt::before {
       content: "";
       position: fixed;
@@ -107,11 +126,8 @@
       background-size: cover;
     }
 
-    /* Na mobilu / při vertikální orientaci bezel zmizí */
     @media (orientation: portrait) {
-      .bezel {
-        display: none;
-      }
+      .bezel { display: none; }
     }
 
     /* ================= LAYOUT ================= */
@@ -183,19 +199,6 @@
       color: #7aff7a;
     }
 
-    /* ================= BADGES ================= */
-    .badge_container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-bottom: 20px;
-    }
-
-    .badge_container img {
-      height: 31px;
-      image-rendering: pixelated;
-    }
-
     /* ================= SECTIONS ================= */
     .section {
       margin: 42px 0;
@@ -215,25 +218,6 @@
       99% { opacity: 1; }
     }
 
-    /* ================= ITCH EMBED ================= */
-    .itch-embed {
-      width: 100%;
-      max-width: 552px;
-    }
-
-    .itch-embed iframe {
-      width: 100%;
-      height: 167px;
-    }
-
-    /* ================= REGISTRY ================= */
-    .ue {
-      display: flex;
-      justify-content: space-between;
-      padding: 6px 0;
-      border-bottom: 1px dotted #2a2a2a;
-    }
-
     /* ================= FOOTER ================= */
     .footer {
       border-top: 1px solid #2a2a2a;
@@ -243,126 +227,61 @@
       margin-top: 48px;
     }
 
-    /* ================= MOBILE ================= */
     @media (max-width: 768px) {
-      .contents {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .banner {
-        display: none;
-      }
-
-      .header {
-        flex-direction: column;
-        text-align: center;
-        gap: 12px;
-      }
-
-      h1 {
-        font-size: 1.5rem;
-      }
-    }
-
-    @media (max-width: 480px) {
-      body {
-        font-size: 0.9rem;
-        letter-spacing: 0.04em;
-      }
-
-      .doc {
-        padding: 12px;
-      }
-
-      .badge_container img {
-        height: 26px;
-      }
+      .contents { flex-direction: column; }
+      .banner { display: none; }
+      .header { flex-direction: column; text-align: center; }
+      h1 { font-size: 1.5rem; }
     }
   </style>
-
 </head>
+
 <body class="crt">
   <div class="bezel"></div>
 
   <div class="contents">
     <div class="banner"></div>
 
-```
-<div class="doc">
-  <div class="header">
-    <div class="logo"></div>
-    <div>
-      <h1>Retarded Games Studios</h1>
-      <div class="tagline">unity prototypes · broken ideas · releases maybe</div>
+    <div class="doc">
+      <div class="header">
+        <div class="logo"></div>
+        <div>
+          <h1>Retarded Games Studios</h1>
+          <div class="tagline">unity prototypes · broken ideas · releases maybe</div>
+        </div>
+      </div>
+
+      <div class="section about">
+        <img src="fire.gif" class="fire-gif">
+        <div class="about-text">
+          <p>
+            We are an <b>"team"</b> indie developing games in Unity.<br>
+            We create prototypes and broken releases, focusing on everything but the game.
+          </p>
+        </div>
+      </div>
+
+      <!-- CONTACT SECTION -->
+      <div class="section contact">
+        <img src="nicegif.gif" class="contact-gif">
+
+        <div class="contact-text">
+          <p>
+            If you have any questions or queries,<br>
+            contact us via
+            <a href="mailto:retardedgamesstudios@gmail.com">email</a>
+            or
+            <a href="https://discord.gg/3mxwqVwEB3" target="_blank">discord</a>.
+          </p>
+        </div>
+      </div>
+
+      <div class="footer">
+        © 2025 Retarded Games Studios
+      </div>
     </div>
-  </div>
 
-  <div class="badge_container">
-    <a href="https://revolut.me/matyasimrich" target="_blank"><img src="revolut.gif"></a>
-    <a href="https://store.steampowered.com" target="_blank"><img src="steam.gif"></a>
-    <a href="https://discord.gg/3mxwqVwEB3" target="_blank"><img src="pagerdiscord.gif"></a>
-    <a href="mailto:retardedgamesstudios@gmail.com"><img src="email.gif"></a>
-    <img src="//theoldnet.com/images/theoldnetanimblur2.gif">
-    <img src="internet.gif"></a>
-  </div>
-    <div class="counter" style="margin-bottom: 24px;">
-    <a href='https://www.counters-free.net/'>www.counters-free.net</a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=927ee7c3486312e5c2679611869084699ad32da8'></script>
-    <script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1464040/t/5"></script>
-  </div>
-
-  <div class="section about">
-    <img src="fire.gif" alt="fire" class="fire-gif">
-
-    <div class="about-text">
-      <p>
-        We are an <b>"team"</b> indie developing games in Unity.<br>
-        We create prototypes and broken releases, focusing on everything but the game.
-      </p>
-      <p>
-        Follow us for new prototypes and small games.<br>
-        Feedback is welcome, even tho none will come.
-      </p>
-    </div>
-  </div>
-
-  <div class="section">
-    <h2>RELEASES</h2>
-    <p>Playable builds hosted on itch.io</p>
-
-    <div class="itch-embed">
-      <iframe frameborder="0" src="https://itch.io/embed/4106588?bg_color=000000&fg_color=ffffff&link_color=ffffff"></iframe>
-    </div>
-    <br>
-    <div class="itch-embed">
-      <iframe frameborder="0" src="https://itch.io/embed/4047607?bg_color=000000&fg_color=ffffff&link_color=ffffff"></iframe>
-    </div>
-  </div>
-
-  <div class="section">
-    <h2>IN DEVELOPMENT</h2>
-    <p>Realistic atmospheric game focused on sound, isolation, radio signals and space communication.</p>
-    <p>More soon.</p>
-    <a href="https://www.youtube.com/@retarded-games-studios" target="_blank">▶ YouTube channel</a>
-  </div>
-
-  <div class="section">
-    <h2>REGISTRY</h2>
-    <div class="ue"><span>[2025]</span><span>first prototype uploaded</span></div>
-    <div class="ue"><span>[2025]</span><span>discord created</span></div>
-    <div class="ue"><span>[2024]</span><span>idea phase (eternal)</span></div>
-  </div>
-
-  <div class="footer">
-    <a href="https://retarded-games-studios.itch.io/">itch</a> ·
-    <a href="https://discord.gg/3mxwqVwEB3">discord</a><br>
-    © 2025 Retarded Games Studios
-  </div>
-</div>
-
-<div class="banner"></div>
-```
-
+    <div class="banner"></div>
   </div>
 </body>
 </html>
